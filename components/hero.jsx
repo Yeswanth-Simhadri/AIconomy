@@ -8,26 +8,30 @@ import Link from "next/link";
 const HeroSection = () => {
   const imageRef = useRef(null);
 
-  useEffect(() => {
-    const imageElement = imageRef.current;
+  // useEffect(() => {
+  //   const imageElement = imageRef.current;
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const scrollThreshold = 100;
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     const scrollThreshold = 100;
 
-      if (scrollPosition > scrollThreshold) {
-        imageElement.classList.add("scrolled");
-      } else {
-        imageElement.classList.remove("scrolled");
-      }
-    };
+  //     if (scrollPosition > scrollThreshold) {
+  //       imageElement.classList.add("scrolled");
+  //     } else {
+  //       imageElement.classList.remove("scrolled");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
-    <section className="pt-40 pb-20 px-4">
+    <section className="pt-40  px-4"> 
+
+             {/* pb-20 */}
+
+
       <div className="container mx-auto text-center">
       <h1 className="text-4xl md:text-6xl lg:text-8xl text-green-400 pb-6 gradient-title">
         Track Your Finances <br />with Smart Solutions 
@@ -42,7 +46,7 @@ const HeroSection = () => {
             </Button>
           </Link>
         </div>
-        <div className="hero-image-wrapper mt-5 md:mt-0">
+        {/* <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image">
             <Image
               src="/banner.jpeg"
@@ -53,7 +57,7 @@ const HeroSection = () => {
               priority
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
